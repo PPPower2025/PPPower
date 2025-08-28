@@ -1,8 +1,7 @@
-# Netlify configuration for a static site
+# Netlify configuration for a static HTML site
+
 [build]
+  # Publish the repo root (where index.html lives)
   publish = "."
 
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+# We’re handling redirects in the _redirects file instead of here.
