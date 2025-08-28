@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thanks | Power & Pleasure</title>
+
+  <title>Thanks | Power and Pleasure 4 Love</title>
   <meta name="description" content="Thanks for your request! We’ll follow up shortly." />
 
   <!-- Canonical -->
@@ -11,15 +12,17 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Power & Pleasure" />
+  <meta property="og:site_name" content="Power and Pleasure 4 Love" />
   <meta property="og:title" content="Thanks" />
   <meta property="og:description" content="Thanks for your request! We’ll follow up shortly." />
   <meta property="og:url" content="https://powerandpleasure4love.com/thanks.html" />
+  <meta property="og:image" content="https://powerandpleasure4love.com/assets/hero.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Thanks" />
   <meta name="twitter:description" content="Thanks for your request! We’ll follow up shortly." />
+  <meta name="twitter:image" content="https://powerandpleasure4love.com/assets/hero.jpg" />
 
   <!-- Google Fonts: Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -33,7 +36,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Power & Pleasure",
+    "name": "Power and Pleasure 4 Love",
     "url": "https://powerandpleasure4love.com",
     "logo": "https://powerandpleasure4love.com/favicon.ico",
     "sameAs": []
@@ -46,8 +49,8 @@
     <nav>
       <a href="/">Home</a>
       <a href="/couples-styling.html">Couples Styling</a>
-      <a href="#contact">Contact</a>
-      <a href="#vip">VIP</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#vip">VIP</a>
     </nav>
   </header>
 
@@ -60,8 +63,46 @@
   </main>
 
   <footer>
-    <small>&copy; <span id="year"></span> Power & Pleasure. All rights reserved.</small>
+    <small>&copy; <span id="year"></span> Power &amp; Pleasure. All rights reserved.</small>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <!-- Cookie Consent (Gated) -->
+  <div class="cookiebar" id="cookiebar" style="display:none">
+    <p>This website uses cookies to analyze traffic and optimize your experience.</p>
+    <button class="btn" id="cookieAccept">Accept</button>
+  </div>
+  <script>
+    (function () {
+      var KEY = 'ppp-cookies';
+      var accepted = localStorage.getItem(KEY);
+      var bar = document.getElementById('cookiebar');
+
+      function loadAfterConsent() {
+        // Example: Google Analytics 4 (replace G-XXXXXXX)
+        // var s1 = document.createElement('script');
+        // s1.async = true;
+        // s1.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
+        // document.head.appendChild(s1);
+        // var s2 = document.createElement('script');
+        // s2.innerHTML = "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config','G-XXXXXXX');";
+        // document.head.appendChild(s2);
+      }
+
+      if (accepted === '1') {
+        if (bar) bar.style.display = 'none';
+        loadAfterConsent();
+        return;
+      }
+
+      if (bar) bar.style.display = 'block';
+      var btn = document.getElementById('cookieAccept');
+      if (btn) btn.addEventListener('click', function () {
+        localStorage.setItem(KEY, '1');
+        bar.style.display = 'none';
+        loadAfterConsent();
+      });
+    })();
+  </script>
 </body>
 </html>

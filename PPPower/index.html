@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Home | Power &amp; Pleasure</title>
+  <title>Home | Power and Pleasure 4 Love</title>
   <meta name="description" content="A modern couples styling studio and VIP experience. Join the VIP list and request your personalized couples-styling session." />
 
   <!-- Canonical -->
@@ -13,15 +13,17 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Power &amp; Pleasure" />
+  <meta property="og:site_name" content="Power and Pleasure 4 Love" />
   <meta property="og:title" content="Home" />
   <meta property="og:description" content="A modern couples styling studio and VIP experience. Join the VIP list and request your personalized couples-styling session." />
   <meta property="og:url" content="https://powerandpleasure4love.com/" />
+  <meta property="og:image" content="https://powerandpleasure4love.com/assets/hero.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Home" />
   <meta name="twitter:description" content="A modern couples styling studio and VIP experience. Join the VIP list and request your personalized couples-styling session." />
+  <meta name="twitter:image" content="https://powerandpleasure4love.com/assets/hero.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -37,7 +39,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Power & Pleasure",
+    "name": "Power and Pleasure 4 Love",
     "url": "https://powerandpleasure4love.com",
     "logo": "https://powerandpleasure4love.com/favicon.ico",
     "sameAs": []
@@ -48,7 +50,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Power & Pleasure",
+    "name": "Power and Pleasure 4 Love",
     "url": "https://powerandpleasure4love.com",
     "potentialAction": {
       "@type": "SearchAction",
@@ -70,19 +72,17 @@
   </header>
 
   <main>
-    <!-- HERO (centered headline + quick actions) -->
+    <!-- HERO -->
     <section class="hero" style="background:url('/assets/hero.jpg') center/cover no-repeat; position:relative; min-height:70vh; display:flex; flex-direction:column; justify-content:space-between; padding:2rem; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,0.6);">
-  <!-- Brand at top of hero -->
-  <h2 style="margin:0; font-size:1.5rem; font-weight:600; font-family:'Playfair Display', Georgia, serif;">
-    Power and Pleasure 4 Love
-  </h2>
-
-  <!-- Headline at bottom of hero -->
-  <h1 style="margin:0; font-family:'Playfair Display', Georgia, serif; font-size:clamp(2rem, 6vw, 4rem); font-weight:700;">
-    Elevate Your Intimacy Experience
-  </h1>
-</section>
-
+      <!-- Brand at top of hero -->
+      <h2 style="margin:0; font-size:1.5rem; font-weight:600; font-family:'Playfair Display', Georgia, serif;">
+        Power and Pleasure 4 Love
+      </h2>
+      <!-- Headline at bottom of hero -->
+      <h1 style="margin:0; font-family:'Playfair Display', Georgia, serif; font-size:clamp(2rem, 6vw, 4rem); font-weight:700;">
+        Elevate Your Intimacy Experience
+      </h1>
+    </section>
 
     <!-- GRID: VIP + Couples cards -->
     <section class="grid" aria-label="Lead options">
@@ -126,27 +126,50 @@
   </main>
 
   <footer>
-    <small>&copy; <span id="year"></span> Power & Pleasure. All rights reserved.</small>
+    <small>&copy; <span id="year"></span> Power &amp; Pleasure. All rights reserved.</small>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Cookie notice -->
+  <!-- Cookie Consent (Gated) -->
   <div class="cookiebar" id="cookiebar" style="display:none">
     <p>This website uses cookies to analyze traffic and optimize your experience.</p>
     <button class="btn" id="cookieAccept">Accept</button>
   </div>
   <script>
     (function () {
-      try {
-        var accepted = localStorage.getItem('ppp-cookies');
-        var bar = document.getElementById('cookiebar');
-        if (!accepted && bar) bar.style.display = 'block';
-        var btn = document.getElementById('cookieAccept');
-        if (btn) btn.addEventListener('click', function () {
-          localStorage.setItem('ppp-cookies', '1');
-          bar.style.display = 'none';
-        });
-      } catch (e) {}
+      var KEY = 'ppp-cookies';
+      var accepted = localStorage.getItem(KEY);
+      var bar = document.getElementById('cookiebar');
+
+      function loadAfterConsent() {
+        // Example: Google Analytics 4 (replace G-XXXXXXX)
+        // var s1 = document.createElement('script');
+        // s1.async = true;
+        // s1.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
+        // document.head.appendChild(s1);
+        // var s2 = document.createElement('script');
+        // s2.innerHTML = "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config','G-XXXXXXX');";
+        // document.head.appendChild(s2);
+
+        // Example: Meta Pixel (optional)
+        // var s3 = document.createElement('script');
+        // s3.innerHTML = "!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView');";
+        // document.head.appendChild(s3);
+      }
+
+      if (accepted === '1') {
+        if (bar) bar.style.display = 'none';
+        loadAfterConsent();
+        return;
+      }
+
+      if (bar) bar.style.display = 'block';
+      var btn = document.getElementById('cookieAccept');
+      if (btn) btn.addEventListener('click', function () {
+        localStorage.setItem(KEY, '1');
+        bar.style.display = 'none';
+        loadAfterConsent();
+      });
     })();
   </script>
 </body>
