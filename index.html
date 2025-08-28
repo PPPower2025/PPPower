@@ -68,12 +68,13 @@
       <div class="grid">
         <div class="card" id="vip">
           <h2>Join VIP</h2>
-          <!-- Mailchimp Embed: Replace the action URL with your list's form action.
-Find it at Mailchimp → Audience → Signup forms → Embedded forms. -->
-<form action="REPLACE_WITH_YOUR_MAILCHIMP_FORM_ACTION" method="post" target="_blank" novalidate>
-  <label for="mce-EMAIL"><span class="required">VIP Email</span></label>
-  <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="you@example.com" required />
-  <input type="text" name="b_xxxxx_xxxxx" tabindex="-1" value="" aria-hidden="true" style="position:absolute; left:-5000px;">
+          <!-- Mailchimp VIP Signup (auto-tag VIP). Replace action with your audience's form action URL. -->
+<form action="REPLACE_WITH_YOUR_MAILCHIMP_ACTION_VIP" method="post" target="_blank" novalidate>
+  <input type="hidden" name="TAGS" value="VIP" />
+  <label for="vip-email"><span class="required">VIP Email</span></label>
+  <input type="email" name="EMAIL" id="vip-email" placeholder="you@example.com" required />
+  <input type="text" name="FNAME" placeholder="First name (optional)" />
+  <input type="text" name="LNAME" placeholder="Last name (optional)" />
   <button class="btn" type="submit">Join VIP List</button>
   <small class="muted">We respect your inbox. Unsubscribe anytime.</small>
 </form>

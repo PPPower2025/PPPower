@@ -63,62 +63,41 @@
   <main>
     <h1>Request a Couples-Styling Session</h1>
     <p class="muted">Request a personalized couples-styling session—share your sizes, budget, date, and preferred styles.</p>
-
     <div class="card">
-      <!-- OPTION A (Netlify Forms): works if hosted on Netlify. -->
-      <!-- Add netlify + netlify-honeypot attributes. -->
-      <form name="couples-styling" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-        <input type="hidden" name="form-name" value="couples-styling" />
-        <p class="muted" hidden>
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
-
-        <label><span class="required">Your Name(s)</span>
-          <input name="names" required placeholder="Alex & Jordan" />
-        </label>
-
-        <label><span class="required">Contact Email</span>
-          <input name="email" type="email" required placeholder="you@example.com" />
-        </label>
-
-        <label><span>Event Date (if any)</span>
-          <input name="event_date" type="date" />
-        </label>
-
-        <label><span class="required">Budget</span>
-          <select name="budget" required>
-            <option value="">Select…</option>
-            <option>Under $200</option>
-            <option>$200–$500</option>
-            <option>$500–$1,000</option>
-            <option>$1,000+</option>
-          </select>
-        </label>
-
-        <label><span>Sizes (tops/bottoms)</span>
-          <input name="sizes" placeholder="e.g., S & M tops, 30 & 28 bottoms" />
-        </label>
-
-        <label><span>Style Preferences</span>
-          <textarea name="preferences" rows="4" placeholder="Minimal / Bold / Street / Elegant…"></textarea>
-        </label>
-
-        <label><span>Notes</span>
-          <textarea name="notes" rows="4" placeholder="Anything else we should know?"></textarea>
-        </label>
-
-        <button class="btn" type="submit">Send Request</button>
-        <small class="muted">We never share your info. By submitting, you agree to be contacted about your request.</small>
-      </form>
-
-      <hr />
-
-      <!-- OPTION B (Formspree): for non-Netlify hosts. Replace the action with your Formspree endpoint. -->
-      <!--
-      <form action="https://formspree.io/f/REPLACE_ID" method="POST">
-        ...same fields...
-      </form>
-      -->
+      <!-- Mailchimp Couples-Styling Request (auto-tag Couples-Styling). Replace action with your audience's form action URL.
+Ensure custom fields exist in Audience → Settings → Audience fields & *|MERGE|* tags: NAMES, EVENTDATE, BUDGET, SIZES, PREFS, NOTES -->
+<form action="REPLACE_WITH_YOUR_MAILCHIMP_ACTION_COUPLES" method="post" target="_blank" novalidate>
+  <input type="hidden" name="TAGS" value="Couples-Styling" />
+  <label><span class="required">Your Name(s)</span>
+    <input name="NAMES" required placeholder="Alex & Jordan" />
+  </label>
+  <label><span class="required">Contact Email</span>
+    <input name="EMAIL" type="email" required placeholder="you@example.com" />
+  </label>
+  <label><span>Event Date (if any)</span>
+    <input name="EVENTDATE" type="date" />
+  </label>
+  <label><span class="required">Budget</span>
+    <select name="BUDGET" required>
+      <option value="">Select…</option>
+      <option>Under $200</option>
+      <option>$200–$500</option>
+      <option>$500–$1,000</option>
+      <option>$1,000+</option>
+    </select>
+  </label>
+  <label><span>Sizes (tops/bottoms)</span>
+    <input name="SIZES" placeholder="e.g., S & M tops, 30 & 28 bottoms" />
+  </label>
+  <label><span>Style Preferences</span>
+    <textarea name="PREFS" rows="4" placeholder="Minimal / Bold / Street / Elegant…"></textarea>
+  </label>
+  <label><span>Notes</span>
+    <textarea name="NOTES" rows="4" placeholder="Anything else we should know?"></textarea>
+  </label>
+  <button class="btn" type="submit">Send Request</button>
+  <small class="muted">We never share your info. By submitting, you agree to be contacted about your request.</small>
+</form>
     </div>
   </main>
 
