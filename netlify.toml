@@ -1,6 +1,6 @@
 # Netlify configuration for a static site
 [build]
-  publish = "/"
+  publish = "."
 
 [[redirects]]
   from = "/*"
