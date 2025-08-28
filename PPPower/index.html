@@ -25,6 +25,11 @@
 
   <link rel="icon" href="/favicon.ico" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Google Fonts: Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/assets/styles.css" />
 
   <!-- JSON-LD: Organization -->
@@ -55,7 +60,7 @@
 </head>
 <body>
   <header>
-    <strong>Power & Pleasure</strong>
+    <strong>Power and Pleasure 4 Love</strong>
     <nav>
       <a href="/">Home</a>
       <a href="/couples-styling.html">Couples Styling</a>
@@ -66,68 +71,44 @@
 
   <main>
     <!-- HERO (centered headline + quick actions) -->
-    <section class="hero">
-      <!-- Edit this headline below -->
-      <h1>Elevate Your Intimacy Experience</h1>
-
-      <!-- Optional subhead: keep to 1–2 sentences -->
+    <section class="hero" style="background:url('/assets/hero.jpg') center/cover no-repeat;">
+      <!-- Hero font: Playfair Display -->
+      <h1 style="font-family:'Playfair Display', Georgia, serif;">Elevate Your Intimacy Experience</h1>
       <p class="muted">Curated styling and VIP exclusives for couples who want to look—and feel—unforgettable.</p>
-
       <p>
         <a class="btn" href="/couples-styling.html">Open Request Form</a>
         <a class="btn secondary" href="#contact">Contact Us</a>
       </p>
-
-      <!-- Optional hero image: place a file in /assets/, then update the src below -->
-      <!-- <img src="/assets/hero.jpg" alt="Describe your hero image" /> -->
     </section>
 
-    <!-- GRID: VIP + Couples cards (kept from your original) -->
+    <!-- GRID: VIP + Couples cards -->
     <section class="grid" aria-label="Lead options">
       <div class="card" id="vip">
-        <!-- Edit this section title -->
         <h2>Join VIP</h2>
-
-        <!-- VIP signup form (Mailchimp). Replace the action URL and you're done. -->
-        <!-- To change the button text or labels, edit the text inside the tags. -->
         <form action="REPLACE_WITH_YOUR_MAILCHIMP_ACTION_VIP" method="post" target="_blank" novalidate>
-          <!-- This hidden field auto-tags the contact in Mailchimp -->
           <input type="hidden" name="TAGS" value="VIP" />
-
-          <!-- Edit the label text if desired -->
           <label for="vip-email"><span class="required">VIP Email</span></label>
-
-          <!-- Keep the name attributes (EMAIL, FNAME, LNAME) as-is so Mailchimp captures correctly -->
           <input type="email" name="EMAIL" id="vip-email" placeholder="you@example.com" required />
           <input type="text" name="FNAME" placeholder="First name (optional)" />
           <input type="text" name="LNAME" placeholder="Last name (optional)" />
-
-          <!-- Edit the button text below -->
           <button class="btn" type="submit">Join VIP List</button>
-
-          <!-- Edit or remove this helper note -->
           <small class="muted">We respect your inbox. Unsubscribe anytime.</small>
         </form>
       </div>
 
       <div class="card">
-        <!-- Edit this section title and paragraph as needed -->
         <h2>Request Couples-Styling</h2>
         <p>Tell us about your event, sizes, and vibe. We’ll follow up within 1–2 business days.</p>
-
-        <!-- This button links to the Couples page; edit text if you'd like -->
         <a class="btn secondary" href="/couples-styling.html">Open Request Form</a>
       </div>
     </section>
 
-    <!-- CONTACT SECTION (simple; posts to Mailchimp so all leads are centralized) -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <h2>Contact Us</h2>
       <div class="card" style="max-width:640px;margin-inline:auto">
-        <!-- Replace with your Mailchimp audience action URL (can be same as VIP) -->
         <form action="REPLACE_WITH_YOUR_MAILCHIMP_ACTION_VIP" method="post" target="_blank" novalidate>
           <input type="hidden" name="TAGS" value="Contact" />
-          <!-- You can edit labels/placeholders; keep the name attributes for Mailchimp fields -->
           <label><span>Your Name</span>
             <input name="NAMES" placeholder="Your name" />
           </label>
@@ -142,12 +123,11 @@
   </main>
 
   <footer>
-    <!-- You can edit or remove this footer line -->
     <small>&copy; <span id="year"></span> Power & Pleasure. All rights reserved.</small>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Cookie notice (appears once; hides after Accept) -->
+  <!-- Cookie notice -->
   <div class="cookiebar" id="cookiebar" style="display:none">
     <p>This website uses cookies to analyze traffic and optimize your experience.</p>
     <button class="btn" id="cookieAccept">Accept</button>
