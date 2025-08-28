@@ -1,9 +1,15 @@
-# Pleasure & Power — Static Site (GitHub → Netlify)
+# Power & Pleasure — Marketing Site
 
-1) Create a private GitHub repo and upload these files.
-2) In Netlify: Add new site → Import from Git → select this repo → Build command: (leave empty) → Publish directory: /
-3) Connect your custom domain in Netlify and follow the DNS records it shows.
-4) Paste GA4 + Meta Pixel codes in `<head>` and verify.
-5) Replace Mailchimp embedded form code.
+## How to edit (1–2 lines)
+- **Text:** open the relevant `.html` file and change the copy between the tags (e.g., inside `<p>...</p>`). Save, commit, deploy.
+- **Images:** place files in `/assets/` and reference them with `<img src="/assets/yourfile.jpg" alt="..." />`.
 
-This repo also includes `404.html`, `robots.txt`, `sitemap.xml`.
+## VIP (Mailchimp)
+Mailchimp → Audience → Signup forms → **Embedded forms** → copy the **form action URL** and replace it in the VIP form’s `action` attribute in `index.html`.
+
+## Couples-Styling Form
+- **Netlify hosting:** already configured (uses `data-netlify="true"`). Submissions appear in Netlify Forms.
+- **Other hosting:** use Formspree (free tier). Create a form and replace the `action="https://formspree.io/f/REPLACE_ID"` in the commented section of `couples-styling.html`.
+
+## SEO
+Each page has `<title>` + `<meta name="description">`, canonical, Open Graph, Twitter Card, plus `robots.txt` and `sitemap.xml`. Update titles and descriptions as needed.

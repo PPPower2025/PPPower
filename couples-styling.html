@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Couples Styling | Power &amp; Pleasure</title>
+  <meta name="description" content="Request a personalized couples-styling session—share your sizes, budget, date, and preferred styles." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://powerandpleasure4love.com/couples-styling.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Power &amp; Pleasure" />
+  <meta property="og:title" content="Couples Styling" />
+  <meta property="og:description" content="Request a personalized couples-styling session—share your sizes, budget, date, and preferred styles." />
+  <meta property="og:url" content="https://powerandpleasure4love.com/couples-styling.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Couples Styling" />
+  <meta name="twitter:description" content="Request a personalized couples-styling session—share your sizes, budget, date, and preferred styles." />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Power & Pleasure",
+    "url": "https://powerandpleasure4love.com",
+    "logo": "https://powerandpleasure4love.com/favicon.ico",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Power & Pleasure",
+    "url": "https://powerandpleasure4love.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://powerandpleasure4love.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+</head>
+<body>
+  <header>
+    <strong>Power & Pleasure</strong>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/couples-styling.html" aria-current="page">Couples Styling</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Request a Couples-Styling Session</h1>
+    <p class="muted">Request a personalized couples-styling session—share your sizes, budget, date, and preferred styles.</p>
+
+    <div class="card">
+      <!-- OPTION A (Netlify Forms): works if hosted on Netlify. -->
+      <!-- Add netlify + netlify-honeypot attributes. -->
+      <form name="couples-styling" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="couples-styling" />
+        <p class="muted" hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <label><span class="required">Your Name(s)</span>
+          <input name="names" required placeholder="Alex & Jordan" />
+        </label>
+
+        <label><span class="required">Contact Email</span>
+          <input name="email" type="email" required placeholder="you@example.com" />
+        </label>
+
+        <label><span>Event Date (if any)</span>
+          <input name="event_date" type="date" />
+        </label>
+
+        <label><span class="required">Budget</span>
+          <select name="budget" required>
+            <option value="">Select…</option>
+            <option>Under $200</option>
+            <option>$200–$500</option>
+            <option>$500–$1,000</option>
+            <option>$1,000+</option>
+          </select>
+        </label>
+
+        <label><span>Sizes (tops/bottoms)</span>
+          <input name="sizes" placeholder="e.g., S & M tops, 30 & 28 bottoms" />
+        </label>
+
+        <label><span>Style Preferences</span>
+          <textarea name="preferences" rows="4" placeholder="Minimal / Bold / Street / Elegant…"></textarea>
+        </label>
+
+        <label><span>Notes</span>
+          <textarea name="notes" rows="4" placeholder="Anything else we should know?"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send Request</button>
+        <small class="muted">We never share your info. By submitting, you agree to be contacted about your request.</small>
+      </form>
+
+      <hr />
+
+      <!-- OPTION B (Formspree): for non-Netlify hosts. Replace the action with your Formspree endpoint. -->
+      <!--
+      <form action="https://formspree.io/f/REPLACE_ID" method="POST">
+        ...same fields...
+      </form>
+      -->
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Power & Pleasure. All rights reserved.</small>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
