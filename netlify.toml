@@ -2,6 +2,6 @@
 
 [build]
   # Publish the repo root (where index.html lives)
-  publish = "."
+  publish = "PPPower"
 
 # We’re handling redirects in the _redirects file instead of here.
