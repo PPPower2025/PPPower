@@ -85,44 +85,69 @@
     </section>
 
     <!-- GRID: VIP + Couples cards -->
-    <section class="grid" aria-label="Lead options">
-      <div class="card" id="vip">
-        <h2>Join VIP</h2>
-        <form action="REPLACE_WITH_YOUR_MAILCHIMP_ACTION_VIP" method="post" target="_blank" novalidate>
-          <input type="hidden" name="TAGS" value="VIP" />
-          <label for="vip-email"><span class="required">VIP Email</span></label>
-          <input type="email" name="EMAIL" id="vip-email" placeholder="you@example.com" required />
-          <input type="text" name="FNAME" placeholder="First name (optional)" />
-          <input type="text" name="LNAME" placeholder="Last name (optional)" />
-          <button class="btn" type="submit">Join VIP List</button>
-          <small class="muted">We respect your inbox. Unsubscribe anytime.</small>
-        </form>
+<section class="grid" aria-label="Lead options">
+  <!-- VIP Signup -->
+  <div class="card" id="vip">
+    <h2>Join VIP</h2>
+    <form action="https://powerandpleasure4love.us22.list-manage.com/subscribe/post?u=39ea8aee6134126f9ba54cc52&amp;id=a69c3e0662&amp;f_id=00ffc2e1f0" 
+          method="post" target="_blank" novalidate>
+      
+      <input type="hidden" name="TAGS" value="VIP" />
+      
+      <label for="vip-email"><span class="required">VIP Email</span></label>
+      <input type="email" name="EMAIL" id="vip-email" placeholder="you@example.com" required />
+      
+      <input type="text" name="FNAME" placeholder="First name (optional)" />
+      <input type="text" name="LNAME" placeholder="Last name (optional)" />
+      
+      <!-- Anti-bot hidden field -->
+      <div aria-hidden="true" style="position:absolute; left:-5000px;">
+        <input type="text" name="b_39ea8aee6134126f9ba54cc52_a69c3e0662" tabindex="-1" value="">
       </div>
+      
+      <button class="btn" type="submit">Join VIP List</button>
+      <small class="muted">We respect your inbox. Unsubscribe anytime.</small>
+    </form>
+  </div>
 
-      <div class="card">
-        <h2>Request Couples-Styling</h2>
-        <p>Tell us about your event, sizes, and vibe. We’ll follow up within 1–2 business days.</p>
-        <a class="btn secondary" href="/couples-styling.html">Open Request Form</a>
-      </div>
-    </section>
+  <!-- Couples Styling Card -->
+  <div class="card">
+    <h2>Request Couples-Styling</h2>
+    <p>Tell us about your event, sizes, and vibe. We’ll follow up within 1–2 business days.</p>
+    <a class="btn secondary" href="/couples-styling.html">Open Request Form</a>
+  </div>
+</section>
+
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <div class="card" style="max-width:640px;margin-inline:auto">
-        <form action="REPLACE_WITH_YOUR_MAILCHIMP_ACTION_VIP" method="post" target="_blank" novalidate>
-          <input type="hidden" name="TAGS" value="Contact" />
-          <label><span>Your Name</span>
-            <input name="NAMES" placeholder="Your name" />
-          </label>
-          <label><span class="required">Email</span>
-            <input name="EMAIL" type="email" required placeholder="you@example.com" />
-          </label>
-          <button class="btn" type="submit">Send</button>
-          <small class="muted">We’ll get back to you shortly.</small>
-        </form>
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <div class="card" style="max-width:640px;margin-inline:auto">
+    <form action="https://powerandpleasure4love.us22.list-manage.com/subscribe/post?u=39ea8aee6134126f9ba54cc52&amp;id=a69c3e0662&amp;f_id=00ffc2e1f0" 
+          method="post" target="_blank" novalidate>
+      
+      <!-- Tag all signups from this form as "Contact" -->
+      <input type="hidden" name="TAGS" value="Contact" />
+      
+      <label><span>Your Name</span>
+        <input name="FNAME" placeholder="Your name" />
+      </label>
+      
+      <label><span class="required">Email</span>
+        <input name="EMAIL" type="email" required placeholder="you@example.com" />
+      </label>
+      
+      <!-- Anti-bot honeypot field -->
+      <div aria-hidden="true" style="position:absolute; left:-5000px;">
+        <input type="text" name="b_39ea8aee6134126f9ba54cc52_a69c3e0662" tabindex="-1" value="">
       </div>
-    </section>
+      
+      <button class="btn" type="submit">Send</button>
+      <small class="muted">We’ll get back to you shortly.</small>
+    </form>
+  </div>
+</section>
+
   </main>
 
   <footer>
